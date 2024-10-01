@@ -7,8 +7,8 @@ import { ChordsModule } from 'src/chords/chords.module';
 import { SpotifyService } from 'src/spotify/spotify.service';
 
 @Module({
-  imports: [ChordsModule, SpotifyModule],
+  imports: [ChordsModule],
   controllers: [SongsController],
-  providers: [SongsService, SongsRepository, SpotifyService],
+  providers: [SongsService, SongsRepository],
 })
 export class SongsModule {}
