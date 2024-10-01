@@ -1,0 +1,16 @@
+.story-view-container {
+    height: 100%;
+}
+
+.story-container {
+    border: solid rgba(255, 255, 255, 0.5);
+    height: 70%;
+}
+
+.input-container {
+    margin-top: 16px;
+}
+
+.story-input {
+    margin-right: 8px;
+}
