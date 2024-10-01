@@ -10,7 +10,7 @@ export class SongsService {
     private readonly songsRepository: SongsRepository,
     private readonly chordsService: ChordsService,
   ) {}
-  async getSongById(id: Track['id']): Promise<Track> {
+  async getSongWithChordsById(id: Track['id']): Promise<TrackWithChords> {
     const lines = await this.chordsService.getLinesBySongId(id);
     const songMetadata = await this.songsRepository.getSongById(id);
 
@@ -20,5 +20,9 @@ export class SongsService {
     };
 
     return trackWithChords;
+  }
+
+  async getSongs(): Promise<Track> {
+    return this.songsRepository.getSongs() as any as Track;
   }
 }

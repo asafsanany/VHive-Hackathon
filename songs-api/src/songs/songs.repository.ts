@@ -7,4 +7,9 @@ export class SongsRepository {
     // SPOTIFY API
     return;
   }
+
+  async getSongs(): Promise<Track[]> {
+    // SPOTIFY API
+    return;
+  }
 }
